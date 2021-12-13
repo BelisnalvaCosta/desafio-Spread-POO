@@ -18,8 +18,17 @@ public class TurmaDev {
     void listarDev() {
         System.out.println("\nLista de Desenvolvedores");
 
-        for (Dev devNaLista:listaDeAlunoDev) {
-            devNaLista.listar();
+        for (Dev alunoDevNaLista : listaDeAlunoDev) {
+            alunoDevNaLista.listar();
+        }
+    }
+
+    void listarSituacoes() {
+        System.out.println("\nSituações");
+
+        for (Dev AlunoDevNaLista:listaDeAlunoDev) {
+            AlunoDev AlunoNaLista = null;
+            AlunoNaLista.mostrarSituacoes();
         }
     }
 

@@ -17,7 +17,10 @@ public class AlunoDev {
         XpAlunoDev = xpAlunoDev;
     }
 
-    public AlunoDev(String nome, String cpf) {
+    public AlunoDev(String nome, String cpf, float Xp) {
+    }
+
+    public static void insereAlunoDev() {
     }
 
     void insereXP(float Xp) {
@@ -53,7 +56,7 @@ public class AlunoDev {
         System.out.println("\nCPF: " + this.cpf);
         System.out.println("\nXpAlunoDev: " + this.XpAlunoDev);
 
-        for(int i = 0; i < XpAlunoDev.size(); i++) {
+        for (int i = 0; i < XpAlunoDev.size(); i++) {
             System.out.println("Xp " + (i + 1) + ": " + this.XpAlunoDev.get(i));
         }
     }
@@ -65,17 +68,20 @@ public class AlunoDev {
     }
 
     void calcularXp() {
-        for(float xpDaLista: XpAlunoDev) {
+        for (float xpDaLista : XpAlunoDev) {
             total = total + xpDaLista;
         }
 
-        if(total >= 70) {
+        if (total >= 70) {
             this.situacao = "Aprovado";
-        }else{
+        } else {
             this.situacao = "Reprovado";
         }
     }
 
     public void listarAlunoDev() {
+    }
+
+    public void listarSituacoes() {
     }
 }

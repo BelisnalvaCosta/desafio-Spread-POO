@@ -69,9 +69,10 @@ public class Main {
         System.out.println("Conteúdos Inscritos Bella:" + devBella.getConteudosInscritos());
         devBella.progredir();
         devBella.progredir();
-        System.out.println("--");
+        devBella.progredir();
+        System.out.println("-");
         System.out.println("Conteúdos Concluidos Bella:" + devBella.getConteudosConcluidos());
-        System.out.println("XP:" + devBella.calcularTotalXp());
+        System.out.println("XP: " + devBella.calcularTotalXp());
 
         System.out.println("-------");
 
@@ -80,10 +81,8 @@ public class Main {
         devAnna.inscreverBootcamp(bootcamp);
         System.out.println("Conteúdos Inscritos Anna:" + devAnna.getConteudosInscritos());
         devAnna.progredir();
-        devAnna.progredir();
-        devAnna.progredir();
         System.out.println("-");
         System.out.println("Conteúdos Concluidos Anna:" + devBella.getConteudosConcluidos());
-        System.out.println("XP:" + devAnna.calcularTotalXp());
+        /System.out.println("XP:" + devAnna.calcularTotalXp());
     }
 }

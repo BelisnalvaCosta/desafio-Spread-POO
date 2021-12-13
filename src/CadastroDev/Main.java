@@ -7,11 +7,11 @@ public class Main {
     private static AlunoDev NovaTumaDev;
 
     public static void main(String[] args) {
-        int opcao, qtdXp;
+        int opcao, qtdXp = 0;
         float Xp = 0;
         String nome, cpf;
-        AlunoDev novoAlunoDev = new AlunoDev();
         TurmaDev navaTurmaDev = new TurmaDev();
+        AlunoDev novoAlunoDev = new AlunoDev();
         Scanner Bootcamp;
 
         //Declarando o Bootcamp
@@ -29,8 +29,7 @@ public class Main {
             opcao = Bootcamp.nextInt();
             Bootcamp.nextLine();
 
-            switch
-            (opcao) {
+            switch(opcao) {
 
                 case 1:
                     System.out.println("\nNome: ");
@@ -38,28 +37,26 @@ public class Main {
                     System.out.println("\nCPF:");
                     cpf = Bootcamp.nextLine();
 
-                    novoAlunoDev = new AlunoDev(nome, cpf);
+                    novoAlunoDev = new AlunoDev(nome, cpf, Xp);
+
                     System.out.println("\nQuantosXp?");
                     qtdXp = Bootcamp.nextInt();
 
                     for(int i = 0; i <qtdXp; i++) {
                         System.out.println("\nXp " + (i + 1));
                         Xp = Bootcamp.nextFloat();
-                        novoAlunoDev.insereXP(i);
+                        novoAlunoDev.insereXP(Xp);
                     }
 
                     navaTurmaDev.insereAlunoDev(novoAlunoDev);
-                    
 
                     break;
                 case 2:
-                    NovaTumaDev.listarAlunoDev();
-                    
+                    AlunoDev.insereAlunoDev();
 
                     break;
                 case 3:
-                    AlunoDev novaTurmaDev = novoAlunoDev;
-                    novaTurmaDev.mostrarSituacoes();
+                    NovaTumaDev.listarSituacoes();
 
                     break;
                 case 0:
