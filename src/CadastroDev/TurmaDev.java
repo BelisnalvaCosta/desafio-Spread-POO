@@ -5,20 +5,20 @@ import br.dio.Spread.desafio.dominio.Dev;
 import java.util.ArrayList;
 
 public class TurmaDev {
-    ArrayList<Dev> listaDeAlunoDev;
+    ArrayList<Dev> listarAlunoDev;
 
     public TurmaDev() {
-        this.listaDeAlunoDev = new ArrayList<>();
+        this.listarAlunoDev = new ArrayList<>();
     }
 
     void insereDev(Dev novoAlunoDev) {
-        listaDeAlunoDev.add(novoAlunoDev);
+        listarAlunoDev.add(novoAlunoDev);
     }
 
     void listarDev() {
         System.out.println("\nLista de Desenvolvedores");
 
-        for (Dev alunoDevNaLista : listaDeAlunoDev) {
+        for (Dev alunoDevNaLista : listarAlunoDev) {
             alunoDevNaLista.listar();
         }
     }
@@ -26,7 +26,7 @@ public class TurmaDev {
     void listarSituacoes() {
         System.out.println("\nSituações");
 
-        for (Dev AlunoDevNaLista:listaDeAlunoDev) {
+        for (Dev AlunoDevNaLista:listarAlunoDev) {
             AlunoDev AlunoNaLista = null;
             AlunoNaLista.mostrarSituacoes();
         }

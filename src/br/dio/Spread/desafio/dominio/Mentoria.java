@@ -6,6 +6,7 @@ public class Mentoria extends Conteudo {
 
     private static final double XP_PADRAO = 0;
     private LocalDateTime data;
+    private calcularXp calcularXp;
 
     @Override
     public double calcularXp() {
@@ -19,7 +20,6 @@ public class Mentoria extends Conteudo {
 
     @Override
     public void setCalcularXp(double calcularXp) {
-
     }
 
     public Mentoria () {
@@ -38,9 +38,8 @@ public class Mentoria extends Conteudo {
         return "Mentoria{" +
                 "titulo='" + getTitulo() + '\'' +
                 ", descricao='" + getDescricao() + '\'' +
-                ", data=" + data +
+                ", data=" + data + '\'' +
+                ", calcularXp =" + calcularXp +
                 '}';
     }
 }
-
-

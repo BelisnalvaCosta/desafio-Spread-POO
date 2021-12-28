@@ -1,5 +1,8 @@
 package br.dio.Spread.desafio.dominio;
 
+import java.io.InputStream;
+import java.util.Scanner;
+
 public abstract class Conteudo {
 
     protected static final double XP_PADRAO = 10d;
@@ -28,4 +31,5 @@ public abstract class Conteudo {
     public abstract void setCargaHoraria(String s);
 
     public abstract void setCalcularXp(double calcularXp);
-}
+
+    }

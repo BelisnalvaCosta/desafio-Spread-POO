@@ -7,6 +7,16 @@ public class Main {
 
         Curso curso1 = new Curso() {
             @Override
+            public String getCalcularXP() {
+                return null;
+            }
+
+            @Override
+            public void setCalcularXp(double calcularXp) {
+                super.setCalcularXp(calcularXp);
+            }
+
+            @Override
             public double calcularXp() {
                 return 0;
             }
@@ -22,6 +32,10 @@ public class Main {
 
         Curso curso2 = new Curso() {
             @Override
+            protected String getCalcularXP() {
+                return null;
+            }
+
             public double calcularXp() {
                 return 0;
             }
@@ -36,6 +50,16 @@ public class Main {
         curso2.setCargaHoraria("6");
 
         Curso curso3 = new Curso() {
+            @Override
+            protected String getCalcularXP() {
+                return null;
+            }
+
+            @Override
+            public void setCalcularXp(double calcularXp) {
+                super.setCalcularXp(calcularXp);
+            }
+
             @Override
             public double calcularXp() {
                 return 0;
@@ -70,7 +94,7 @@ public class Main {
         devBella.progredir();
         devBella.progredir();
         devBella.progredir();
-        System.out.println("-");
+        System.out.println("--");
         System.out.println("Conteúdos Concluidos Bella:" + devBella.getConteudosConcluidos());
         System.out.println("XP: " + devBella.calcularTotalXp());
 
@@ -82,7 +106,7 @@ public class Main {
         System.out.println("Conteúdos Inscritos Anna:" + devAnna.getConteudosInscritos());
         devAnna.progredir();
         System.out.println("-");
-        System.out.println("Conteúdos Concluidos Anna:" + devBella.getConteudosConcluidos());
-        /System.out.println("XP:" + devAnna.calcularTotalXp());
+        System.out.println("Conteúdos Concluidos Anna:" + devAnna.getConteudosConcluidos());
+        System.out.println("XP:" + devAnna.calcularTotalXp());
     }
 }

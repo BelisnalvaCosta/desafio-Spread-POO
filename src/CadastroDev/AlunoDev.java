@@ -23,6 +23,9 @@ public class AlunoDev {
     public static void insereAlunoDev() {
     }
 
+    protected static void TurmaDev() {
+    }
+
     void insereXP(float Xp) {
         final boolean add = XpAlunoDev.add(Xp);
     }
@@ -79,7 +82,7 @@ public class AlunoDev {
         }
     }
 
-    public void listarAlunoDev() {
+    public static void listarAluno() {
     }
 
     public void listarSituacoes() {

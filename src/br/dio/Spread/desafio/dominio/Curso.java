@@ -23,10 +23,13 @@ public abstract class Curso extends Conteudo {
     public String toString() {
         return "Curso{" +
                 "titulo='" + getTitulo() + '\'' +
+                ", calcularXP='" + getCalcularXP() + '\'' +
                 ", descricao='" + getDescricao() + '\'' +
                 ", cargaHoraria=" + cargaHoraria +
                 '}';
     }
+
+    protected abstract String getCalcularXP();
 
     @Override
     public void setCalcularXp(double calcularXp) {
