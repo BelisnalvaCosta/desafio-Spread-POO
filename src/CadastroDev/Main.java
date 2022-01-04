@@ -8,8 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
         int opcao, qtdXp = 0;
-        float Xp = 0;
-        String nome, cpf, xp;
+        double Xp = 0;
+        String nome, cpf;
         TurmaDev navaTurmaDev = new TurmaDev();
         AlunoDev novoAlunoDev = new AlunoDev();
         Scanner Bootcamp;

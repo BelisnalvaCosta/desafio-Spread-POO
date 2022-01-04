@@ -2,27 +2,14 @@ package br.dio.Spread.desafio.dominio;
 
 import java.time.LocalDateTime;
 
-public class Mentoria extends Conteudo {
+public class Mentoria extends Conteudo{
 
-    private static final double XP_PADRAO = 0;
     private LocalDateTime data;
-    private calcularXp calcularXp;
 
-    @Override
+    public Mentoria(){}
+
     public double calcularXp() {
         return XP_PADRAO + 20d;
-    }
-
-    @Override
-    public void setCargaHoraria(String s) {
-
-    }
-
-    @Override
-    public void setCalcularXp(double calcularXp) {
-    }
-
-    public Mentoria () {
     }
 
     public LocalDateTime getData() {
@@ -38,8 +25,7 @@ public class Mentoria extends Conteudo {
         return "Mentoria{" +
                 "titulo='" + getTitulo() + '\'' +
                 ", descricao='" + getDescricao() + '\'' +
-                ", data=" + data + '\'' +
-                ", calcularXp =" + calcularXp +
+                ", data=" + data +
                 '}';
     }
 }

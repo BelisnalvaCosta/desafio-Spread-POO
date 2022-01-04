@@ -1,14 +1,22 @@
 package br.dio.Spread.desafio.dominio;
 
-import java.io.InputStream;
-import java.util.Scanner;
-
 public abstract class Conteudo {
 
     protected static final double XP_PADRAO = 10d;
 
     private String titulo;
     private String descricao;
+    private Integer cargaHoraria;
+    private double calcularXp;
+
+
+    protected Conteudo(double calcularXp) {
+        this.calcularXp = calcularXp;
+    }
+
+    public Conteudo() {
+
+    }
 
     public abstract double calcularXp();
 
@@ -28,8 +36,12 @@ public abstract class Conteudo {
         this.descricao = descricao;
     }
 
-    public abstract void setCargaHoraria(String s);
-
-    public abstract void setCalcularXp(double calcularXp);
-
+    public int getCargaHoraria() {
+        return getCargaHoraria();
     }
+
+    public void setCargaHoraria(int cargaHoraria) {
+        this.cargaHoraria = cargaHoraria;
+    }
+
+}

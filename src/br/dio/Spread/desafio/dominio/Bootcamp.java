@@ -14,7 +14,7 @@ public class Bootcamp {
     private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> DevsInscritos = new HashSet<>();
     private Set<Conteudo> conteudos = new LinkedHashSet<>();
-    private Set<calcularXp> calcularXps;
+    private Set<CalcularXp> CalcularXps = new LinkedHashSet<>();
 
     public String getNome() {
         return nome;
@@ -28,7 +28,7 @@ public class Bootcamp {
         return descricao;
     }
 
-    public void setDescreicao(String descricao) {
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
@@ -56,8 +56,11 @@ public class Bootcamp {
         this.conteudos = conteudos;
     }
 
-    public void setCalcularXp() {
-
+    public Set<CalcularXp> getCalcularXp() {
+        return CalcularXps;
+    }
+    public void setCalcularXp(Set<CalcularXp> calcularXps) {
+        this.CalcularXps = CalcularXps;
     }
 
     @Override
@@ -73,3 +76,5 @@ public class Bootcamp {
         return Objects.hash(nome, descricao, dataInicial, dataFinal, DevsInscritos, conteudos);
     }
 }
+
+

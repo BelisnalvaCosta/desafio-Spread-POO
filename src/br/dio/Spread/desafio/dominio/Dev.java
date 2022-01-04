@@ -10,6 +10,7 @@ public class Dev {
     private String nome;
     private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
+    private Set<CalcularXp> calcularXps = new LinkedHashSet<>();
 
     protected static void listarSituacoes() {
     }
@@ -65,13 +66,12 @@ public class Dev {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Dev dev = (Dev) o;
-        return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos);
+        return Objects.equals(nome, dev.nome) && Objects.equals(conteudosInscritos, dev.conteudosInscritos) && Objects.equals(conteudosConcluidos, dev.conteudosConcluidos) && Objects.equals(calcularXps, dev.calcularXps);
     }
 
     @Override
     public int hashCode() {
-        int hash = Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
-        return hash;
+        return Objects.hash(nome, conteudosInscritos, conteudosConcluidos, calcularXps);
     }
 
     public void listar() {
